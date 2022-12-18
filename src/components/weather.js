@@ -45,13 +45,13 @@ const Weather = () => {
     <div className={"weather-body"}>
       <Container>
         <Row className={"weather-row"}>
-          <Col sm={4}>
+          <Col md={8} lg={6} xl={4} xxl={4}>
             <WeatherForm setCity={setCity} />
           </Col>
           {loading ? (
             <p>Yükleniyor...</p>
           ) : (
-            <Col sm={4}>
+            <Col md={8} lg={6} xl={4} xxl={4}>
               <WeatherCard weatherData={weatherData} />
             </Col>
           )}

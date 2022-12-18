@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
-    width: 30vw;
     height: 70vh !important;
     padding: 2rem;
     position: relative;
@@ -29,6 +28,10 @@
       font-size: 3rem;
       color: white;
       margin-bottom:2rem;
+      @media (max-width: 1024px) {
+        font-size: 2.2rem;
+      }
+
     }
 
     .card-text {

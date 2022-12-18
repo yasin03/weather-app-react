@@ -8,16 +8,15 @@ const WeatherCard = (props) => {
   const { weatherData } = props;
 
   console.log(weatherData);
-  const desc = weatherData.weather[0].description;
-  const upper = (val) => {
-    val.toUppercase();
-  };
+
   return (
     <div className="weather-card">
       <Card className="weather-card-card">
         <div className="weather-card-bg"></div>
         <Card.Body>
-          <Card.Title>{weatherData.name}</Card.Title>
+          <Card.Title>
+            {weatherData.name}, {weatherData.sys.country}
+          </Card.Title>
           <Card.Text>
             {weatherData.main.temp < 18 ? (
               <WiSnowflakeCold />
@@ -34,7 +33,7 @@ const WeatherCard = (props) => {
           </Card.Text>
           <Card.Text>
             &nbsp;
-            {weatherData.weather[0].description}
+            {weatherData.weather[0].description.toUpperCase()}
           </Card.Text>
         </Card.Body>
       </Card>
