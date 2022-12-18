@@ -1,4 +1,3 @@
-import Maps from "./components/maps";
 import Weather from "./components/weather";
 
 const App = () => {
